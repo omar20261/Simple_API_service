@@ -18,14 +18,18 @@ export class HomeComponent implements OnInit {
 
   SendGetReq(){
     let myheader = {key:this.HeaderKey,val:this.HeaderVal};
-    this.API.getFun('/anyUrl',myheader).subscribe(res => {
+    this.API.getFun('/sssss',myheader).subscribe(res => {
       console.log(res)
+    },(e)=>{
+      console.log(e)
     });
   }
   SendPostReq(){
     let myheader = {key:this.HeaderKey,val:this.HeaderVal};
     this.API.postFun('/anyUrl',myheader,{}).subscribe(res => {
       console.log(res)
+    },(e)=>{
+      console.log(e)
     });
   }
 }
