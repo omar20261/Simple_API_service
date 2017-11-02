@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GvarsService } from './services/G_vars/gvars.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private Gvars:GvarsService){}
+  title = 'app works!';
 }
